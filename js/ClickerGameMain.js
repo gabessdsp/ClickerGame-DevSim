@@ -23,7 +23,7 @@ confirm("Are you ready to play?");
 		rent = 550;
 	}
 	
-var gameTime = setInterval(timeTracker, 1);
+var gameTime = setInterval(timeTracker, 10);
 if(jobStatus == true) {
 	var goToNewWorkDay = setInterval(newWorkDay, 6000);
 	var getPaidSalary = setInterval(doGetPaid, 60000);
@@ -83,7 +83,7 @@ function doQuitJob (){
 
 function timeTracker (){
 	if (timeLeft >=1) {
-		timeLeft -= 1;
+		timeLeft -= 10;
 	}else{
 		clearInterval(gameTime);
 		if(gameProgress>=100){
