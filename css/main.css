@@ -1,0 +1,53 @@
+.button {
+	color: red;
+	border: 1px solid #000000;
+	width: 100px;
+	height: 45px;
+	padding: 15px;
+	margin: 25px;
+	text-align: center;
+	cursor: pointer;
+}
+
+.inline {
+	display: inline-block;
+}
+
+.historybar {
+	height: 90%;
+	width: 15%;
+	border-left: 10px solid red;
+	margin-left: 84%;
+	margin-top: 0%;
+	background-color: black;
+	display: block;
+	position: absolute;
+	overflow: scroll;
+}
+
+.historybar span {
+	color: white;
+	clear: both;
+}
+
+.historybar .sideJob, .getPaid {
+	background-color: green;
+}
+
+.historybar .paidRent, .warning {
+	background-color: red;
+}
+
+.historybar .quitJob {
+	background-color: red;
+	color: blue;
+}
+
+.historybar .workLoad {
+	background-color: blue;
+}
+
+.historybar .workOnGame {
+	background-color: green;
+	color: red;
+}

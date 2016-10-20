@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>ClickerGame V: 0.1</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/ClickerGameMain.js"></script>
+  </head>
+  <body>
+  <div class="historybar" id="historybar"></div>
+    <h1>Our Game Clicker Game</h1>
+	<div id="variables">
+		<div class="inline">Total Money: $ </div><div class ="inline" id="moneyDisplay">2000</div>
+		<br />
+		<div class="inline">Game Progress: </div><div class ="inline" id="gameProgressDisplay">0</div>%
+		<br />
+		<div class="inline">Time Left: </div><div class ="inline" id="timeLeftDisplay">360000</div><span>(ms)</span>
+		<br />
+		<div class="inline">Job Status: </div><div class ="inline" id="jobStatusDisplay">True</div>
+		<br />
+		<div class="inline">Units of Work: </div><div class ="inline" id="unitsOfWorkDisplay">0</div>
+	</div>
+	
+	
+	
+	<div class="button" onclick="doWork()">Do Work</div>
+	<div class="button" onclick="doMakeGame()">Make Game</div>
+	<div class="button" onclick="doSideJob()">Side Job</div>
+	<div class="button" onclick="doQuitJob()">Quit Main Job</div>
+  </body>
+</html>
