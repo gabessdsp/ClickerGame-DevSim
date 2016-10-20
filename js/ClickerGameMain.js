@@ -24,8 +24,10 @@ confirm("Are you ready to play?");
 	}
 	
 var gameTime = setInterval(timeTracker, 1);
-var goToNewWorkDay = setInterval(newWorkDay, 6000);
-var getPaidSalary = setInterval(doGetPaid, 60000);
+if(jobStatus == true) {
+	var goToNewWorkDay = setInterval(newWorkDay, 6000);
+	var getPaidSalary = setInterval(doGetPaid, 60000);
+}
 var payRent = setInterval(doPayRent, 60000);
 	
 	
