@@ -6,6 +6,7 @@ var gameProgress = 0;
 var playAgain;
 var workLoad;
 var gameWorkers = 0;
+var assetCost = 500;
 
 confirm("Are you ready to play?");
 
@@ -15,7 +16,6 @@ if (jobStatus == true) {
 } else {
     doQuitJob();
 }
-
 
 var livingSpace = confirm("Do you live in the city or a rural area? (okay for city, cancel for rural)")
 if (livingSpace == true) {
@@ -30,7 +30,6 @@ if (jobStatus == true) {
     var getPaidSalary = setInterval(doGetPaid, 60000);
 }
 var payRent = setInterval(doPayRent, 60000);
-
 
 function doGetPaid() {
     if (jobStatus == true) {
@@ -100,8 +99,28 @@ function doPayBills() {
 }
 
 function doPayEmployees() {
+	//pay empoyees
+}
+
+function doFireEmployee() {
+	if (gameWorkers >= 1){
+		gameWorkers -= 1;
+	}
 	numOfEmployeesDisplay.innerHTML = numOfEmployeesDisplay;
+}
+
+function doHireEmployee() {
+	numOfEmployeesDisplay.innerHTML = numOfEmployeesDisplay;
+	
     historybar.innerHTML += "<span class=\"hiredEmployee\">Hired another employee!</span><br />";
+}
+
+function doBuyAsset() {
+	if (money - assetCost <0){
+	//cannot buy
+	}else{
+	//purchase
+	}
 }
 
 function doPayRent() {
@@ -112,6 +131,8 @@ function doPayRent() {
 
 function doEndGame() {
     clearInterval(gameTime);
+    clearInterval(goToNewWorkDay);
+    clearInterval(getPaidSalary);
     if (gameProgress >= 100) {
         playAgain = confirm("You won! Would you like to play again?");
         if (playAgain == true) {
