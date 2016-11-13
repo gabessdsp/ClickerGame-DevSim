@@ -1,12 +1,16 @@
-.button {
-	color: red;
-	border: 1px solid #000000;
-	width: 100px;
-	height: 45px;
-	padding: 15px;
-	margin: 25px;
+#topHeader {
+	width: 100%;
 	text-align: center;
-	cursor: pointer;
+}
+.button {
+	padding: 100px 0;
+	border: #eee solid;
+	text-align: center;
+	margin-bottom: 30px;
+}
+.button span {
+	display: inline-block;
+	vertical-align: middle;
 }
 
 .inline {
