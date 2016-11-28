@@ -1,62 +1,27 @@
-#topHeader {
-	width: 100%;
-	text-align: center;
-}
 .button {
-	padding: 100px 0;
-	border: #eee solid;
+	color: red;
+	border: 1px solid #000000;
+	width: 100px;
+	height: 45px;
+	padding: 15px;
+	margin: 25px;
 	text-align: center;
-	margin-bottom: 30px;
+	cursor: pointer;
 }
-.button span {
-	display: inline-block;
-	vertical-align: middle;
-}
-
 .inline {
 	display: inline-block;
 }
-
-.historybar {
-	height: 90%;
-	width: 15%;
-	border-left: 10px solid red;
-	margin-left: 84%;
-	margin-top: 0%;
-	background-color: black;
-	display: block;
-	position: absolute;
-	overflow: scroll;
-}
-
-.historybar span {
-	color: white;
-	clear: both;
-}
-
-.historybar .sideJob, .getPaid {
-	background-color: green;
-}
-
-.historybar .paidRent, .warning {
-	background-color: red;
-}
-
-.historybar .quitJob {
-	background-color: red;
-	color: blue;
-}
-
-.historybar .workLoad {
-	background-color: blue;
-}
-
-.historybar .workOnGame {
-	background-color: green;
-	color: red;
-}
-
-.historybar .hiredEmployee {
-	background-color: green;
-	color: red;
+.gabespopups {
+	display: none;
+	width: 200px;
+	height: 100px;
+	margin: 20px auto;
+	padding: 6px;
+	font-size: 16px;
+	color: rgb(255,255,255);
+	text-align: center;
+	border: 3px solid rgb(127,0,0);
+	background-color: rgb(255,0,0);
+	opacity: 1;
+	transition: opacity 3s linear 1s;
 }
