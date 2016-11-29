@@ -1,12 +1,17 @@
-.button {
-	color: red;
-	border: 1px solid #000000;
-	width: 100px;
-	height: 45px;
-	padding: 15px;
-	margin: 25px;
+.buttoSharedSettings {
+	border: 1px solid #eee;
+	width: 100%;
 	text-align: center;
-	cursor: pointer;
+}
+.buttonGeneral {
+    margin-top: 10px;
+    padding: 100px;
+}
+.buttonMakeGame {
+    padding: 163px;
+}
+.buttonVariables {
+    padding: 100px;
 }
 .inline {
 	display: inline-block;
