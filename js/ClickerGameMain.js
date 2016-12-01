@@ -77,7 +77,7 @@ function newWorkDay (){
 	
 function doMakeGame (){
 		gameProgress += 0.05;
-		gameProgressDisplay.innerHTML = gameProgress.toFixed(2);
+		//gameProgressDisplay.innerHTML = gameProgress.toFixed(2);
 		progressBarUpdate();
 }
 
@@ -146,7 +146,7 @@ function timeTracker (){
 
 function doWorkersWork(){
 	gameProgress += (numOfWorkers * .01);
-	gameProgressDisplay.innerHTML = gameProgress.toFixed(2);
+	//gameProgressDisplay.innerHTML = gameProgress.toFixed(2);
 }
 
 function doPayRent (){
@@ -185,7 +185,7 @@ function doBuyAsset() {
 		costOfAssetDisplay.innerHTML = assetPrice.toFixed(2);
 			
 		gameProgress += 10;
-		gameProgressDisplay.innerHTML = gameProgress.toFixed(2);
+		//gameProgressDisplay.innerHTML = gameProgress.toFixed(2);
 
 		progressBarUpdate();
 	}else{

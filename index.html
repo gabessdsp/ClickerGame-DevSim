@@ -16,20 +16,61 @@
                 <h5>By: Robert Klein, Gabriel McKenna, Jessica Los & Matthew Dangle</h5>
             </div>
 
-            <div class="progress">
-                <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
-                    <span class="sr-only"></span>
+            <div class="col-sm-12">
+                <div class="progress">
+                    <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
+                        <span class="sr-only"></span>
+                    </div>
                 </div>
             </div>
 
-          <div class="col-sm-6 buttoSharedSettings buttonMakeGame">
+            <div class="col-sm-12">
+                <div class="col-sm-1">
+                    <span>Cash</span>
+                    <br>
+                    <span id="moneyDisplay">$500</span>
+                </div>
+                <div class="col-sm-2">
+                    <span>Timer</span>
+                    <br>
+                    <span id="timeLeftDisplay">360000</span>
+                </div>
+                <div class="col-sm-2">
+                    <span>Job Status</span>
+                    <br>
+                    <span id="jobsStatusDisplay">#</span>
+                </div>
+                <div class="col-sm-2">
+                    <span>Work Units</span>
+                    <br>
+                    <span id="unitsOfWorkDisplay">0</span>
+                </div>
+                <div class="col-sm-2">
+                    <span>Missed Work</span>
+                    <br>
+                    <span id="workPenaltyDisplay">0</span>
+                </div>
+                <div class="col-sm-2">
+                    <span>Day Ends</span>
+                    <br>
+                    <span>####</span>
+                </div>
+                <div class="col-sm-1">
+                    <span>Workers</span>
+                    <br>
+                    <span>####</span>
+                </div>
+            </div>
+
+            <div class="col-sm-12 buttoSharedSettings buttonMakeGame">
                 <div class="btn btn-success" onclick="doMakeGame()">Make Game</div>
             </div>
+            <!--
             <div class="col-sm-6 buttoSharedSettings buttonVariables">
                 <div id="variables">
                     <div class="inline">Total Money: $ </div><div class ="inline" id="moneyDisplay">500</div>
                     <br />
-                    <div class="inline">Game Progress: </div><div class ="inline" id="gameProgressDisplay">0.00</div>%
+                    <!--<div class="inline">Game Progress: </div><div class ="inline" id="gameProgressDisplay">0.00</div>%
                     <br />
                     <div class="inline">Time Left: </div><div class ="inline" id="timeLeftDisplay">360000</div><span>(ms)</span>
                     <br />
@@ -45,25 +86,35 @@
                     <br />
                 </div>
             </div>
+            -->
             <div class="col-sm-3 buttoSharedSettings buttonGeneral">
+                <span>Can't Miss 7 Days</span>
+                <br>
                 <div class="btn btn-primary" id="doWorkButton" onclick="doWork()">Do Work</div>
             </div>
             <div class="col-sm-3 buttoSharedSettings buttonGeneral">
+                <span>Random ##</span>
+                <br>
                 <div class="btn btn-primary" onclick="doSideJob()">Side Job</div>
             </div>
             <div class="col-sm-3 buttoSharedSettings buttonGeneral">
+                <span>$150.00</span>
+                <br>
                 <div class="btn btn-primary" onclick="doHireWorker()">Hire Worker</div>
                 <div class="btn btn-primary" onclick="doFireWorker()">Fire Worker</div>
             </div>
             <div class="col-sm-3 buttoSharedSettings buttonGeneral">
+                <span id="costOfAssetDisplay">$500.00</span>
+                <br>
                 <div class="btn btn-primary" onclick="doBuyAsset()">Buy Game Asset</div>
             </div>
         </div>
       </div>
 	
 	<script src="js/ClickerGameMain.js"></script>
-
+    <!--
       <br>
 	<div class="btn btn-primary" onclick="openPopup()">POPUP TESTER</div>
+    -->
   </body>
 </html>
