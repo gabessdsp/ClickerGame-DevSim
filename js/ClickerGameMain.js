@@ -9,6 +9,7 @@ var workLoad =0;
 var assetPrice = 500;
 var numOfWorkers = 0;
 var workPenalty = 0;
+var progressBar = document.getElementsByClassName("progress-bar");
 
 confirm("Are you ready to play?");
 
@@ -77,6 +78,7 @@ function newWorkDay (){
 function doMakeGame (){
 		gameProgress += 0.05;
 		gameProgressDisplay.innerHTML = gameProgress.toFixed(2);
+		progressBarUpdate();
 }
 
 function doSideJob (){
@@ -184,6 +186,8 @@ function doBuyAsset() {
 			
 		gameProgress += 10;
 		gameProgressDisplay.innerHTML = gameProgress.toFixed(2);
+
+		progressBarUpdate();
 	}else{
 		//cannot buy any more assets
 	}
@@ -196,4 +200,8 @@ function getRandomInt (min, max) {
 function openPopup(){
 	var popup = document.getElementById('mypopup');
 	popup.classList.toggle('show');
+}
+
+function progressBarUpdate() {
+	progressBar[0].style.width = gameProgress+"%";
 }
