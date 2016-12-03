@@ -31,3 +31,9 @@
 	opacity: 1;
 	transition: opacity 3s linear 1s;
 }
+.textCenter {
+	text-align: center;
+	display: inline-block;
+	width: 100%;
+	margin: 0 auto;
+}
