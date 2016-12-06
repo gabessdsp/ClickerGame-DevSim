@@ -12,7 +12,7 @@
       <div class="container">
         <div class="row">
             <div class="jumbotron text-center">
-                <h1>Our Game Clicker Game</h1>
+                <h1>Life of a Game Designer: A Clicker Game</h1>
                 <h5>By: Robert Klein, Gabriel McKenna, Jessica Los & Matthew Dangle</h5>
             </div>
 
@@ -83,12 +83,17 @@
             </div>
             -->
             <div class="col-sm-3 buttoSharedSettings buttonGeneral">
+                <span id="numOfBugsDisplay">0</span>
+            	<br>
+				<div class="btn btn-primary" onclick="doFixBug()">Fix Bugs</div>
+    		</div>
+            <div class="col-sm-3 buttoSharedSettings buttonGeneral">
                 <span>Can't Miss 7 Days</span>
                 <br>
                 <div class="btn btn-primary" id="doWorkButton" onclick="doWork()">Do Work</div>
             </div>
             <div class="col-sm-3 buttoSharedSettings buttonGeneral">
-                <span>Random ##</span>
+                <span id="timeUntilSideJobDisplay">0</span> seconds
                 <br>
                 <div class="btn btn-primary" onclick="doSideJob()">Side Job</div>
             </div>
@@ -107,9 +112,6 @@
       </div>
 	
 	<script src="js/ClickerGameMain.js"></script>
-    <!--
-      <br>
-	<div class="btn btn-primary" onclick="openPopup()">POPUP TESTER</div>
-    -->
+      
   </body>
 </html>

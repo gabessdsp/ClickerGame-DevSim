@@ -9,6 +9,7 @@ var workLoad =0;
 var assetPrice = 500;
 var numOfWorkers = 0;
 var workPenalty = 0;
+var numOfBugs = 0;
 var progressBar = document.getElementsByClassName("progress-bar");
 
 confirm("Are you ready to play?");
@@ -36,8 +37,7 @@ if(jobStatus == true) {
 var payRent = setInterval(doPayRent, 60000);
 var payWorkers = setInterval(doPayWorkers, 60000);
 var workingWorkers = setInterval(doWorkersWork, 6000);
-	
-	
+
 function doGetPaid (){
 	if(jobStatus == true){
 		money += 750;
@@ -76,22 +76,59 @@ function newWorkDay (){
 }
 	
 function doMakeGame (){
+	if(Math.random() <= .1){
+		numOfBugs++;
+		numOfBugsDisplay.innerHTML = numOfBugs;
+	}else{
 		gameProgress += 0.05;
 		//gameProgressDisplay.innerHTML = gameProgress.toFixed(2);
 		progressBarUpdate();
+	}
+}
+
+function doFixBug (){
+	if(Math.random() <= .9 && numOfBugs > 0){
+		numOfBugs--;
+		numOfBugsDisplay.innerHTML = numOfBugs;
+	}
+}
+
+var theSideJobTimer = 0;
+var theSideJobTimer2 = 0;
+var sideJobPossible = true;
+
+
+function sideJobTimer (){
+	sideJobPossible = false;
+	theSideJobTimer = setInterval(updateSideJobTimer, 1000);
+	theSideJobTimer2 = getRandomInt(1,10);
+	timeUntilSideJobDisplay.innerHTML = theSideJobTimer2;
 }
 
 function doSideJob (){
-	if(workLoad <3 && jobStatus == true){
-	}else{
-		
-		if(rent == 1000){
-		money += getRandomInt(150,600);
+	if(sideJobPossible){
+		if(workLoad <=3 && jobStatus == true){
+			//nothing
 		}else{
-		money += getRandomInt(50,300);
-		}
+			
+			if(rent == 1000){
+				money += getRandomInt(150,600);
+			}else{
+				money += getRandomInt(50,300);
+			}
 		
-		moneyDisplay.innerHTML = money.toFixed(2);
+			moneyDisplay.innerHTML = money.toFixed(2);
+			sideJobTimer();
+		}
+	}
+}
+
+function updateSideJobTimer (){
+	theSideJobTimer2 --;
+	timeUntilSideJobDisplay.innerHTML = theSideJobTimer2;
+	if(theSideJobTimer2 <=0){
+		clearInterval(theSideJobTimer);
+		sideJobPossible = true;
 	}
 }
 
@@ -103,7 +140,7 @@ function doQuitJob (){
 }
 
 function timeTracker (){
-	if (gameProgress>=100){
+	if (gameProgress>=100 && numOfBugs <=0){
 		clearInterval(gameTime);
 		clearInterval(payRent);
 		clearInterval(goToNewWorkDay);
@@ -126,6 +163,7 @@ function timeTracker (){
 		clearInterval(goToNewWorkDay);
 		clearInterval(getPaidSalary);
 		clearInterval(doWorkersWork);
+		clearInterval(doPayWorkers);
 		if(gameProgress>=100){
 			playAgain = confirm("You won! Would you like to play again?");
 				if(playAgain == true){
