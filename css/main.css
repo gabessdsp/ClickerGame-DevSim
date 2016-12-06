@@ -6,10 +6,12 @@
 .buttonGeneral {
     margin-top: 10px;
     padding: 50px;
+	background: url("../resources/images/general.jpg");
 }
 .buttonMakeGame {
 	margin-top: 20px;
     padding: 120px;
+	background: url("../resources/images/code.jpg");
 }
 .buttonVariables {
     padding: 100px;
