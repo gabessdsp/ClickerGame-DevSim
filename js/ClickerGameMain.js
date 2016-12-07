@@ -90,6 +90,9 @@ function doFixBug (){
 	if(Math.random() <= .9 && numOfBugs > 0){
 		numOfBugs--;
 		numOfBugsDisplay.innerHTML = numOfBugs;
+		if(gameProgress>=100){
+			gameProgress += 0.05;
+		}
 	}
 }
 
