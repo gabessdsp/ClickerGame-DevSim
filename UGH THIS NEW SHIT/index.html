@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	  <meta charset="utf-8">
+	  <title>ClickerGame V: 0.3</title>
+	  <link rel="stylesheet" href="css/bootstrap.min.css">
+	  <link rel="stylesheet" href="css/main.css">
+  </head>
+
+  <body>
+  
+<!--<div class="alert">
+	<span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+	Test Alert Box
+</div>-->
+  
+	  <div class="jumbotron text-center">
+		  <h1>Clicker Game</h1>
+		  <p>By: Bobby Klein, Gabriel McKenna, Jessica Los, Matthew Dangle</p>
+	  </div>
+	  <div class="container">
+		  <div class="row">
+			  <div class="col-sm-6">
+				  <div class="button" onclick="doMakeGame()"><span>Make Game</span></div>
+			  </div>
+			  <div class="col-sm-6">
+				  <div id="variables" class="button">
+					  <div class="inline">Total Money: $ </div><div class ="inline" id="moneyDisplay"></div>
+					  <br />
+					  <div class="inline">Game Progress: </div><div class ="inline" id="gameProgressDisplay"></div>%
+					  <br />
+					  <div class="inline">Time Left: </div><div class ="inline" id="timeLeftDisplay"></div><span>(ms)</span>
+					  <br />
+					  <div class="inline">Job Status: </div><div class ="inline" id="jobStatusDisplay"></div>
+					  <br />
+					  <div class="inline">Units of Work: </div><div class ="inline" id="unitsOfWorkDisplay"></div>
+                      <br />
+                      <div class="inline">Number of Workers: </div><div class ="inline" id="numOfWorkersDisplay"></div>
+					  <br />
+				  </div>
+			  </div>
+			  <div class="col-sm-3">
+				  <div class="button" id="doWorkButton" onclick="doWork()"><div>Do Work</div></div>
+			  </div>
+			  <div class="col-sm-3">
+				  <div class="button" onclick="doSideJob()"><span>Side Job</span></div>
+			  </div>
+			  <div class="col-sm-3">
+				  <div class="button" onclick="doHire()"><div>Hire Worker</div></div>
+			  </div>
+			  <div class="col-sm-3">
+				  <div class="button" onclick="doFire()"><div>Fire Worker</div></div>
+			  </div>
+			  <div class="col-sm-3">
+				  <div class="button" onclick="doBuyAsset()"><div>Buy Game Asset</div></div>
+			  </div>
+		  </div>
+	  </div>
+	  <script src="js/ClickerGameMain.js"></script>
+	  <script src="js/alertbox.js"></script>
+  </body>
+</html>

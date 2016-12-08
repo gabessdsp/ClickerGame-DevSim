@@ -1,0 +1,52 @@
+#topHeader {
+	width: 100%;
+	text-align: center;
+}
+.button {
+	padding: 100px 0;
+	border: #eee solid;
+	text-align: center;
+	margin-bottom: 30px;
+	cursor: pointer;
+}
+.button span {
+	display: inline-block;
+	vertical-align: middle;
+}
+.inline {
+	display: inline-block;
+}
+.alert {
+	opacity: 1;
+	transition: opacity 0.6s;
+	padding: 20px;
+	background-color: #f44336;
+	color: white;
+	position: fixed;
+	width: 100%;
+	margin-top: 0px;
+	margin-left: 0px;
+	z-index: 100000;
+}
+.alert.good {
+	background-color: #4CAF50;
+}
+.alert.nuetral {
+	background-color: #2196F3;
+}
+.alert.caution {
+	background-color: #ff9800;
+}
+.closebtn {
+	margin-left: 15px;
+	color: white;
+	font-weight: bold;
+	float: right;
+	font-size: 22px;
+	line-height: 20px;
+	cursor: pointer;
+	transition: 0.3s;
+}
+.closebtn:hover {
+	color: black;
+}
