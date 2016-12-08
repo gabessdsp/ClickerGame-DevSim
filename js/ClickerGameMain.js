@@ -104,7 +104,7 @@ var sideJobPossible = true;
 function sideJobTimer (){
 	sideJobPossible = false;
 	theSideJobTimer = setInterval(updateSideJobTimer, 1000);
-	theSideJobTimer2 = getRandomInt(1,10);
+	theSideJobTimer2 = getRandomInt(1,5);
 	timeUntilSideJobDisplay.innerHTML = theSideJobTimer2;
 }
 
